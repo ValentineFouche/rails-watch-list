@@ -1,5 +1,9 @@
 <h1>List</h1>
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill %>
+  <% end %>
 <h2><%= @list.name %></h2>
+<% console %>
 
 <% @list.bookmarks.each do |bookmark| %>
 <li>
